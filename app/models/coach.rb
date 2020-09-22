@@ -1,6 +1,7 @@
 class Coach < ApplicationRecord
     has_many :appointments 
     has_many :users, through: :appointments
+    has_many :reviews
 
     before_create :slugify 
     def slugify 
